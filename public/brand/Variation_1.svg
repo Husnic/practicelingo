@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 218.7 288.66">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-8 {
+        fill: #005eb8;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-9 {
+        fill: #2ec63c;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-10 {
+        fill: #e6f1fb;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-4);
+        opacity: .36;
+      }
+
+      .cls-11 {
+        font-family: SegoeUI-Bold, 'Segoe UI';
+        font-size: 58.72px;
+        font-weight: 700;
+      }
+
+      .cls-7 {
+        fill: #2eb6cc;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="44" y1="96.4" x2="191.14" y2="96.4" gradientUnits="userSpaceOnUse">
+      <stop offset=".08" stop-color="#0f6837"/>
+      <stop offset="1" stop-color="#2e9e35"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="30.14" y1="69.38" x2="182.91" y2="21.11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#005eb8"/>
+      <stop offset=".26" stop-color="#2085cf"/>
+      <stop offset=".59" stop-color="#44b1e8"/>
+      <stop offset=".85" stop-color="#5bccf9"/>
+      <stop offset="1" stop-color="#64d7ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="108.42" y1="108.64" x2="108.42" y2="75.2" gradientTransform="translate(216.83 187.19) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e6f1fb"/>
+      <stop offset=".06" stop-color="#d0ecfb"/>
+      <stop offset=".17" stop-color="#aee5fc"/>
+      <stop offset=".29" stop-color="#93e0fd"/>
+      <stop offset=".42" stop-color="#7edcfe"/>
+      <stop offset=".57" stop-color="#6fd9fe"/>
+      <stop offset=".74" stop-color="#66d7fe"/>
+      <stop offset="1" stop-color="#64d7ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="109.99" y1="51.1" x2="151.01" y2="92.12" gradientUnits="userSpaceOnUse">
+      <stop offset=".39" stop-color="#2eb6cc"/>
+      <stop offset=".47" stop-color="#32b8cf"/>
+      <stop offset=".55" stop-color="#3ec0db"/>
+      <stop offset=".64" stop-color="#52ccee"/>
+      <stop offset=".69" stop-color="#64d7ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="123.4" y1="97.15" x2="123.4" y2="62.58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e6f1fb"/>
+      <stop offset=".18" stop-color="#e6f1fb" stop-opacity=".99"/>
+      <stop offset=".31" stop-color="#e7f1fb" stop-opacity=".95"/>
+      <stop offset=".43" stop-color="#e8f2fb" stop-opacity=".89"/>
+      <stop offset=".54" stop-color="#ebf3fb" stop-opacity=".8"/>
+      <stop offset=".64" stop-color="#edf5fc" stop-opacity=".68"/>
+      <stop offset=".74" stop-color="#f1f7fc" stop-opacity=".54"/>
+      <stop offset=".84" stop-color="#f5f9fd" stop-opacity=".37"/>
+      <stop offset=".93" stop-color="#fafcfe" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <path class="cls-2" d="M191.14,79.15c0,5.99-.03,10.81-.1,12.6-1.04,19.96-15.84,36.28-34.85,40.14-.22.05-.44.09-.65.13-2.66.5-5.41.76-8.21.74-14.74.14-37.26.34-52,.67-27.1.6-50.11,22.74-51.33,23.22,0-.7.03-1.6.2-2.64.05-.3.13-.71.13-.72.16-.63.33-1.29.55-1.97h0s0-.03.01-.04c.02-.06.05-.13.07-.19h-.01c.07-.24.15-.48.24-.72.58-1.88,1.26-3.68,2.04-5.42,2.45-5.5,5.82-10.3,9.85-14.49,9.6-9.98,22.89-16.53,36.11-20.97.38.16.8.25,1.24.25h28.03c1.77,0,3.2-1.43,3.2-3.2v-25.36c7.9-1.12,15.92-2.48,23.69-4.68,19.11-4.73,38.83-17.45,40.39-39.68.11-1.53.42,0,.55.62.54,2.61.81,5.45.86,8.14v.06c0,4.86.02,13.46.02,21.97,0,3.99,0,7.97,0,11.54Z"/>
+        <path class="cls-4" d="M187.77,32.53c.13,4.23-1.08,9.04-2.81,13.39-3.68,9.28-11.3,15.6-17.78,19.62-1.7,1.06-3.47,2.03-5.29,2.91-2.67,1.3-5.47,2.42-8.34,3.4-9.04,3.09-18.82,4.77-27.91,6.1-1.88.28-3.74.53-5.54.79-7.46,1.06-13.44,2.38-20.08,4.36-3.16.95-6.1,1.96-8.8,2.99-13.46,5.13-21.09,10.74-21.79,11.27-7.51,5.69-14.4,13.82-20.85,24.7-.58.53-1.21.43-1.86,0-12.21-8.07-19.14-22.01-19.14-37.14v-41.63c0-14.35,6.98-27.06,17.74-34.93.2-.14.4-.29.6-.44.24-.17.49-.34.74-.51.29-.2.58-.38.87-.57C53.35,3.06,60.17.68,67.5.13c.31-.02.63-.04.95-.06.79-.05,1.58-.07,2.38-.07h30.15c20.51,0,42.4.02,45.04,0,19.71-.16,37.32,13.71,41.74,32.43v.1Z"/>
+        <path class="cls-7" d="M93.16,109.49c-18.76,6.31-37.67,16.84-45.96,35.46-.78,1.73-1.46,3.54-2.04,5.42-.09.25-.17.49-.24.72-.02.06-.05.13-.06.19,0,.01,0,.02-.01.03h0c-.21.69-.38,1.34-.55,1.97,0,0-.09.45-.13.72-.17,1.04-.2,1.94-.2,2.64h0s-.07-.06-.11-.1c-.02-.02-.04-.04-.06-.06-.09-.1-.3-.37-.46-1.09,0,0,0-.01,0-.02h0c-.48-1.52-.72-3.1-1.02-4.97-3.97-23.38,17.25-49.72,38.11-60.42,2.68-1.42,6.81-3.42,10.76-5.04v21.62c0,1.33.81,2.46,1.96,2.95Z"/>
+        <path class="cls-10" d="M153.54,50.6v21.25c-9.04,3.09-18.82,7.43-27.91,8.76v25.94c0,1.77-1.43,3.2-3.2,3.2h-28.03c-.44,0-.86-.09-1.24-.25-1.15-.49-1.96-1.62-1.96-2.95v-24.71h-24.71c-1.77,0-3.2-1.43-3.2-3.2v-28.03c0-1.77,1.43-3.2,3.2-3.2h24.71v-24.71c0-1.77,1.43-3.2,3.2-3.2h28.03c1.77,0,3.2,1.43,3.2,3.2v24.71h24.71c1.77,0,3.2,1.43,3.2,3.2Z"/>
+        <rect class="cls-5" x="95.57" y="81.83" width="25.68" height="23.54" transform="translate(216.83 187.19) rotate(180)"/>
+        <path class="cls-1" d="M183.8,48.48c-3.97,7.9-10.76,13.42-16.63,17.05-3.54,2.21-8.44,4.41-13.63,6.43v-21.36l-.02-.24c11.63-2.03,22.29-2.19,30.28-1.88Z"/>
+        <path class="cls-6" d="M153.54,50.6v21.25c-9.04,3.09-18.82,7.49-27.91,8.81v.29h-30.06c-2.55-2.86,24.11-20.8,52.24-29.47,1.88-.58,3.83-.8,5.71-1.13l.02.24Z"/>
+        <rect class="cls-3" x="121.26" y="62.76" width="4.29" height="32.04"/>
+      </g>
+      <text class="cls-11" transform="translate(0 213.18)"><tspan class="cls-8"><tspan x="0" y="0">Practice</tspan></tspan><tspan class="cls-9"><tspan x="32.11" y="50.18">Lingo</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

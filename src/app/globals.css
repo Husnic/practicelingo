@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F7F9FC;
+  --foreground: #1A1A1A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-background: #F7F9FC;
+  --color-foreground: #1A1A1A;
+  --font-sans: var(--font-dm-sans);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand colors */
+  --color-primary: #005EB8;
+  --color-primary-dark: #004A93;
+  --color-secondary: #2EB6CC;
+  --color-light-blue: #64D7FF;
+  --color-surface: #E6F1FB;
+  --color-teal: #0B7A82;
+  --color-green-light: #98D37F;
+  --color-nhs-green: #007F3B;
+  --color-dark: #1A1A1A;
+  --color-text-secondary: #5F6368;
+  --color-border: #E5E7EB;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-success: #22C55E;
+  --color-bg: #F7F9FC;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #F7F9FC;
+  color: #1A1A1A;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-6px) rotate(1deg); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in-up   { animation: fadeInUp 0.65s ease both; }
+.animate-fade-in      { animation: fadeIn 0.5s ease both; }
+.animate-float        { animation: float 5s ease-in-out infinite; }
+.animate-float-slow   { animation: floatSlow 7s ease-in-out infinite; }
+.animate-slide-right  { animation: slideInRight 0.65s ease both; }
+.animate-scale-in     { animation: scaleIn 0.5s ease both; }
+
+/* Stagger helpers */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
