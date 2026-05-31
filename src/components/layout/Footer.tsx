@@ -47,20 +47,23 @@ export default function Footer() {
           {/* Brand col */}
           <div className="lg:col-span-2">
             <Image
-              src="/brand/Primary.png"
+              src="/brand/Primary-white.svg"
               alt="PracticeLingo"
               width={160}
               height={40}
-              className="mb-4"
+              className="h-9 w-auto mb-4"
             />
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs mb-6">
               Multilingual patient communication for GP surgeries and Primary
               Care Networks across the UK.
             </p>
-            <p className="text-xs text-gray-500 leading-relaxed">
-              PracticeLingo supports NHS workflows and services but is not owned
-              or operated by NHS England unless formally stated.
-            </p>
+            {/* NHS compatibility note */}
+            <div className="flex items-center gap-3 bg-white/5 rounded-xl px-3 py-2.5 border border-white/10 max-w-xs">
+              <Image src="/nhs.png" alt="NHS" width={36} height={20} className="h-5 w-auto opacity-80" />
+              <p className="text-xs text-gray-400 leading-relaxed">
+                Supports NHS workflows. Not owned by NHS England.
+              </p>
+            </div>
           </div>
 
           {/* Product */}

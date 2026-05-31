@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import SectionHeader from "@/components/shared/SectionHeader";
 import Button from "@/components/shared/Button";
 import CTASection from "@/components/home/CTASection";
+import Image from "next/image";
 import { Globe, Settings, Building2, Accessibility } from "lucide-react";
 
 const values = [
@@ -38,13 +39,21 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-primary to-secondary py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4">About PracticeLingo</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section className="relative bg-gradient-to-br from-[#005EB8] to-[#2EB6CC] py-20 lg:py-28 overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-[0.08]"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1400&q=60')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4 animate-fade-in">About PracticeLingo</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up delay-100">
               Built To Make Healthcare Easier To Understand
             </h1>
-            <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto animate-fade-in-up delay-200">
               PracticeLingo exists to help every patient access healthcare confidently, regardless of language barriers.
             </p>
           </div>
@@ -53,7 +62,7 @@ export default function AboutPage() {
         {/* Why we exist */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row items-start gap-16">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
               <div className="flex-1">
                 <SectionHeader
                   eyebrow="Why We Exist"
@@ -75,20 +84,34 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Stats */}
-              <div className="flex-1 grid grid-cols-2 gap-4">
-                {[
-                  { stat: "10+", label: "Languages supported", color: "bg-primary text-white" },
-                  { stat: "QR", label: "No app download needed", color: "bg-surface text-dark" },
-                  { stat: "NHS", label: "Compatible workflows", color: "bg-surface text-dark" },
-                  { stat: "0", label: "Reception dependency", color: "bg-nhs-green text-white" },
-                ].map((item) => (
-                  <div key={item.label} className={`${item.color} rounded-3xl p-6`}>
-                    <p className="text-3xl font-bold mb-1">{item.stat}</p>
-                    <p className={`text-sm ${item.color.includes("white") ? "opacity-80" : "text-text-secondary"}`}>{item.label}</p>
-                  </div>
-                ))}
+              {/* Image + Stats */}
+              <div className="flex-1">
+                <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl mb-6">
+                  <Image
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80"
+                    alt="Diverse patients receiving healthcare support"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#005EB8]/20 to-transparent" />
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { stat: "10+", label: "Languages supported", bg: "bg-[#005EB8]", light: true },
+                    { stat: "QR", label: "No app download needed", bg: "bg-[#E6F1FB]", light: false },
+                    { stat: "NHS", label: "Compatible workflows", bg: "bg-[#E6F1FB]", light: false },
+                    { stat: "0", label: "Reception dependency", bg: "bg-[#007F3B]", light: true },
+                  ].map((item) => (
+                    <div key={item.label} className={`${item.bg} rounded-2xl p-5`}>
+                      <p className={`text-3xl font-bold mb-1 ${item.light ? "text-white" : "text-[#005EB8]"}`}>{item.stat}</p>
+                      <p className={`text-xs ${item.light ? "text-white/70" : "text-text-secondary"}`}>{item.label}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
+
             </div>
           </div>
         </section>

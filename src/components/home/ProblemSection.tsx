@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const patientProblems = [
@@ -18,71 +19,77 @@ const practiceProblems = [
 
 export default function ProblemSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow="The Challenge"
-          title="Language Barriers Are Slowing Down Healthcare Access"
-          subtitle="Across the UK, many GP practices serve patients whose first language is not English — creating friction for patients and pressure for practice teams."
-          centered
-        />
+        <div className="flex flex-col lg:flex-row items-center gap-16">
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Patient side */}
-          <div className="bg-surface rounded-3xl p-8 lg:p-10">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+          {/* Image — diverse patients in waiting room */}
+          <div className="flex-1 relative animate-fade-in">
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0 shadow-xl">
+              <Image
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+                alt="Diverse patients in a GP waiting room"
+                fill
+                className="object-cover"
+              />
+              {/* Overlay card */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-border">
+                <p className="text-dark font-semibold text-sm mb-1">Language barriers affect</p>
+                <p className="text-3xl font-bold text-[#005EB8]">1 in 6</p>
+                <p className="text-text-secondary text-xs mt-1">GP patients in diverse UK communities</p>
               </div>
-              <h3 className="text-lg font-bold text-dark">Patients Often Struggle To</h3>
             </div>
-            <ul className="space-y-3">
-              {patientProblems.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-error/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-error" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p className="text-text-secondary text-sm leading-relaxed">{item}</p>
-                </li>
-              ))}
-            </ul>
+            {/* Decorative ring */}
+            <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full border-2 border-[#E6F1FB] -z-10" />
+            <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-[#E6F1FB] -z-10" />
           </div>
 
-          {/* Practice side */}
-          <div className="bg-surface rounded-3xl p-8 lg:p-10">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-warning/10 flex items-center justify-center">
-                <svg className="w-5 h-5 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-dark">For Practices, This Leads To</h3>
-            </div>
-            <ul className="space-y-3">
-              {practiceProblems.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-warning/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-warning" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p className="text-text-secondary text-sm leading-relaxed">{item}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          {/* Text */}
+          <div className="flex-1">
+            <SectionHeader
+              eyebrow="The Challenge"
+              title="Language Barriers Are Slowing Down Healthcare Access"
+              subtitle="Across the UK, many GP practices serve patients whose first language is not English — creating friction for patients and pressure for practice teams."
+            />
 
-        {/* Solution teaser */}
-        <div className="mt-10 text-center">
-          <p className="text-dark font-semibold text-lg">
-            PracticeLingo was created to solve this problem{" "}
-            <span className="text-primary">simply and effectively.</span>
-          </p>
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {/* Patient side */}
+              <div className="bg-[#FEF2F2] rounded-2xl p-5 border border-red-100">
+                <p className="text-sm font-bold text-[#EF4444] uppercase tracking-wider mb-3">Patients struggle to</p>
+                <ul className="space-y-2.5">
+                  {patientProblems.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5">
+                      <div className="w-4 h-4 rounded-full bg-[#EF4444]/15 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#EF4444]" />
+                      </div>
+                      <p className="text-text-secondary text-sm leading-relaxed">{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Practice side */}
+              <div className="bg-[#FFFBEB] rounded-2xl p-5 border border-amber-100">
+                <p className="text-sm font-bold text-[#F59E0B] uppercase tracking-wider mb-3">Practices face</p>
+                <ul className="space-y-2.5">
+                  {practiceProblems.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5">
+                      <div className="w-4 h-4 rounded-full bg-[#F59E0B]/15 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+                      </div>
+                      <p className="text-text-secondary text-sm leading-relaxed">{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <p className="mt-8 text-dark font-semibold text-lg">
+              PracticeLingo was created to solve this{" "}
+              <span className="text-[#005EB8]">simply and effectively.</span>
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
