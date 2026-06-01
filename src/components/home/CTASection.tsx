@@ -1,36 +1,72 @@
+import Image from "next/image";
 import Button from "@/components/shared/Button";
 
 export default function CTASection() {
   return (
-    <section className="py-20 lg:py-28 bg-bg">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl px-8 py-16 lg:py-20 relative overflow-hidden">
-          {/* Background pattern */}
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-              backgroundSize: "28px 28px",
-            }}
-          />
-          <div className="relative">
-            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4">
+    <section className="relative py-24 lg:py-32 overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=80"
+        alt="Healthcare professionals supporting patients"
+        fill
+        className="object-cover object-center"
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#003D80]/90 via-[#005EB8]/80 to-[#0B7A82]/85" />
+      {/* Dot grid */}
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+          backgroundSize: "28px 28px",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Left text */}
+          <div className="flex-1 max-w-2xl">
+            <p className="text-white/60 text-sm font-semibold tracking-widest uppercase mb-4">
               Get Started
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
               Bring Clearer Communication To Your Practice
             </h2>
-            <p className="text-blue-100 text-lg mb-10 max-w-xl mx-auto">
-              Book a demo or get in touch to see how PracticeLingo transforms multilingual patient communication across your practice.
+            <p className="text-white/80 text-lg leading-relaxed">
+              Book a demo or get in touch to see how PracticeLingo transforms
+              multilingual patient communication across your practice.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" size="lg" variant="white">
-                Book Demo
-              </Button>
-              <Button href="/contact" size="lg" variant="white-outline">
-                Contact Team
-              </Button>
+          </div>
+
+          {/* Right: CTA card */}
+          <div className="flex-shrink-0 w-full lg:w-auto">
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 min-w-[280px]">
+              <p className="text-white font-bold text-lg mb-2">
+                Ready to start?
+              </p>
+              <p className="text-white/70 text-sm mb-6">
+                Join GP practices already improving multilingual communication.
+              </p>
+              <div className="flex flex-col gap-3">
+                <Button
+                  href="/contact"
+                  size="lg"
+                  variant="white"
+                  className="w-full justify-center"
+                >
+                  Book Demo
+                </Button>
+                <Button
+                  href="/contact"
+                  size="lg"
+                  variant="white-outline"
+                  className="w-full justify-center"
+                >
+                  Contact Team
+                </Button>
+              </div>
             </div>
           </div>
         </div>

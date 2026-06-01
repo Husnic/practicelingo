@@ -161,23 +161,47 @@ export default function HowItWorksSection() {
                   </div>
                 </div>
 
-                {/* Phone */}
-                <div className="flex flex-col items-center gap-3 shrink-0">
-                  <span className="text-xs text-gray-400 uppercase tracking-wider font-medium">Patient&apos;s Phone</span>
-                  <MockPhone>
-                    <MobileMenuDemo lang="Arabic" langFlag="🇸🇦" />
-                  </MockPhone>
+                {/* Phones — three languages */}
+                <div className="flex items-end gap-4 shrink-0">
+                  {[
+                    { lang: "Arabic",     langFlag: "🇸🇦", langCode: "ar" as const, label: "Arabic" },
+                    { lang: "Hindi",      langFlag: "🇮🇳", langCode: "hi" as const, label: "Hindi" },
+                    { lang: "Português",  langFlag: "🇵🇹", langCode: "pt" as const, label: "Portuguese" },
+                  ].map(({ lang, langFlag, langCode, label }, i) => (
+                    <div key={lang} className="flex flex-col items-center gap-2 shrink-0">
+                      <span className="text-xs text-gray-400 uppercase tracking-wider font-medium">{label}</span>
+                      <div style={{ zoom: i === 1 ? 1 : 0.88 }}>
+                        <MockPhone>
+                          <MobileMenuDemo lang={lang} langFlag={langFlag} langCode={langCode} />
+                        </MockPhone>
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-2">
-              {["/welcome", "/menu", "/book-appointment", "/register", "/repeat-prescriptions", "/nhs-app", "/health-campaigns", "/learn-about-your-health"].map((url) => (
-                <span key={url} className="bg-white/10 text-gray-300 text-xs font-mono px-3 py-1 rounded-lg border border-white/10">
-                  {url}
-                </span>
-              ))}
+            {/* Patient journey URL map — layman labels */}
+            <div className="mt-8">
+              <p className="text-center text-xs text-gray-500 mb-3 uppercase tracking-wider font-medium">Every step has its own page</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {[
+                  { label: "Welcome",             icon: "👋" },
+                  { label: "Main Menu",           icon: "🏠" },
+                  { label: "Book Appointment",    icon: "📅" },
+                  { label: "Register",            icon: "📝" },
+                  { label: "Repeat Prescriptions",icon: "💊" },
+                  { label: "NHS App Guide",       icon: "📱" },
+                  { label: "Health Campaigns",    icon: "📢" },
+                  { label: "Learn About Health",  icon: "📚" },
+                ].map(({ label, icon }) => (
+                  <span key={label} className="flex items-center gap-1.5 bg-white/10 text-gray-300 text-xs px-3 py-1.5 rounded-lg border border-white/10">
+                    <span>{icon}</span>
+                    {label}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

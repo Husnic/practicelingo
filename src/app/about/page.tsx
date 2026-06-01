@@ -4,6 +4,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import Button from "@/components/shared/Button";
 import CTASection from "@/components/home/CTASection";
 import Image from "next/image";
+import PageHero from "@/components/shared/PageHero";
 import { Globe, Settings, Building2, Accessibility } from "lucide-react";
 
 const values = [
@@ -38,26 +39,14 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="relative bg-gradient-to-br from-[#005EB8] to-[#2EB6CC] py-20 lg:py-28 overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1400&q=60')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4 animate-fade-in">About PracticeLingo</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up delay-100">
-              Built To Make Healthcare Easier To Understand
-            </h1>
-            <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto animate-fade-in-up delay-200">
-              PracticeLingo exists to help every patient access healthcare confidently, regardless of language barriers.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="About PracticeLingo"
+          title="Built To Make Healthcare Easier To Understand"
+          subtitle="PracticeLingo exists to help every patient access healthcare confidently, regardless of language barriers."
+          imageUrl="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1600&q=80"
+          imageAlt="NHS GP surgery waiting area"
+          overlayColor="#005EB8"
+        />
 
         {/* Why we exist */}
         <section className="py-20 lg:py-28 bg-white">

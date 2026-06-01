@@ -5,6 +5,7 @@ import CTASection from "@/components/home/CTASection";
 import SectionHeader from "@/components/shared/SectionHeader";
 import MockPhone from "@/components/shared/MockPhone";
 import QRCodeMock from "@/components/shared/QRCodeMock";
+import PageHero from "@/components/shared/PageHero";
 import { Monitor, Globe, QrCode, FileText, CheckCircle2 } from "lucide-react";
 import MobileMenuDemo from "@/components/shared/MobileMenuDemo";
 
@@ -21,18 +22,13 @@ export default function HowItWorksPage() {
     <>
       <Navbar />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-primary to-secondary py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4">How It Works</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Designed Around Real Patient Journeys
-            </h1>
-            <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              PracticeLingo combines waiting room displays, QR technology, multilingual translation, and mobile continuation into one simple workflow.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="How It Works"
+          title="Designed Around Real Patient Journeys"
+          subtitle="PracticeLingo combines waiting room displays, QR technology, multilingual translation, and mobile continuation into one simple workflow."
+          imageUrl="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&q=80"
+          imageAlt="NHS waiting room with patients"
+        />
 
         {/* Patient journey */}
         <section className="py-20 bg-white">
@@ -103,6 +99,7 @@ export default function HowItWorksPage() {
                     practiceName="Brompton Medical Centre"
                     lang="Português"
                     langFlag="🇵🇹"
+                    langCode="pt"
                   />
                 </MockPhone>
               </div>

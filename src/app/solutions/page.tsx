@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import SectionHeader from "@/components/shared/SectionHeader";
 import Button from "@/components/shared/Button";
 import CTASection from "@/components/home/CTASection";
+import PageHero from "@/components/shared/PageHero";
 import { Globe, BarChart3, Lock, Smartphone, Settings, TrendingUp } from "lucide-react";
 
 const gpFeatures = [
@@ -42,18 +43,14 @@ export default function SolutionsPage() {
     <>
       <Navbar />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-primary to-secondary py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4">Solutions</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Designed For Modern Healthcare Environments
-            </h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              From individual GP practices to full PCN deployments — PracticeLingo scales to your needs.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Solutions"
+          title="Designed For Modern Healthcare Environments"
+          subtitle="From individual GP practices to full PCN deployments — PracticeLingo scales to your needs."
+          imageUrl="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1600&q=80"
+          imageAlt="Healthcare professionals in a modern NHS practice"
+          overlayColor="#0B7A82"
+        />
 
         {/* GP Practices */}
         <section className="py-20 bg-white">

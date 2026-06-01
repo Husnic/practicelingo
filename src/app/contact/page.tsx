@@ -6,6 +6,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import Button from "@/components/shared/Button";
 import { useState, useRef } from "react";
 import { Mail, Building2, MapPin } from "lucide-react";
+import PageHero from "@/components/shared/PageHero";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -49,17 +50,14 @@ export default function ContactPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-primary to-secondary py-20 lg:py-24">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4">Get in Touch</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Speak With The PracticeLingo Team
-            </h1>
-            <p className="text-xl text-blue-100 max-w-xl mx-auto">
-              Interested in pilot programmes, partnerships, or demonstrations? Get in touch.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Get in Touch"
+          title="Speak With The PracticeLingo Team"
+          subtitle="Interested in partnerships, pilot programmes, or demonstrations? Get in touch."
+          imageUrl="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80"
+          imageAlt="Healthcare professionals in a meeting"
+          overlayColor="#005EB8"
+        />
 
         {/* Contact form */}
         <section className="py-20 bg-bg">

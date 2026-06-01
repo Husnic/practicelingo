@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTASection from "@/components/home/CTASection";
 import MockPhone from "@/components/shared/MockPhone";
+import PageHero from "@/components/shared/PageHero";
 import { RefreshCw, Volume2, Type } from "lucide-react";
 
 const launchLanguages = [
@@ -28,18 +29,14 @@ export default function LanguagesPage() {
     <>
       <Navbar />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-primary to-secondary py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-4">Languages</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Healthcare Guidance In Multiple Languages
-            </h1>
-            <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-              PracticeLingo helps patients access healthcare information in their preferred language — supporting diverse communities across the UK.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Languages"
+          title="Healthcare Guidance In Multiple Languages"
+          subtitle="PracticeLingo helps patients access healthcare information in their preferred language — supporting diverse communities across the UK."
+          imageUrl="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1600&q=80"
+          imageAlt="Diverse community members in the UK"
+          overlayColor="#2EB6CC"
+        />
 
         {/* Launch languages */}
         <section className="py-20 lg:py-28 bg-white">

@@ -77,13 +77,13 @@ export default function Hero() {
               <div className="lg:absolute lg:-bottom-6 lg:-right-16 animate-float" style={{ animationDelay: "1s" }}>
                 <div className="hidden lg:block">
                   <MockPhone label="Patient Phone">
-                    <MobileMenuDemo practiceName="Earl's Court H&W" lang="Arabic" langFlag="🇸🇦" />
+                    <MobileMenuDemo practiceName="Earl's Court H&W" lang="Arabic" langFlag="🇸🇦" langCode="ar" />
                   </MockPhone>
                 </div>
                 {/* On mobile just show the phone */}
                 <div className="lg:hidden">
                   <MockPhone label="Patient Phone">
-                    <MobileMenuDemo practiceName="Earl's Court H&W" lang="Arabic" langFlag="🇸🇦" />
+                    <MobileMenuDemo practiceName="Earl's Court H&W" lang="Arabic" langFlag="🇸🇦" langCode="ar" />
                   </MockPhone>
                 </div>
               </div>
