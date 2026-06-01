@@ -20,7 +20,7 @@ type PatientLayoutProps = {
 
 export default function PatientLayout({
   children,
-  practiceName = "Your GP Practice",
+  practiceName = "Your GP Surgery",
 }: PatientLayoutProps) {
   const [lang, setLang] = useState("en");
   const [showLangPicker, setShowLangPicker] = useState(false);

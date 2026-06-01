@@ -8,7 +8,7 @@ const capabilities = [
     Icon: Globe,
     title: "Select Preferred Language",
     description:
-      "Patients choose from 10+ supported languages on the waiting room display.",
+      "Patients choose from 6 supported languages on the waiting room display.",
   },
   {
     Icon: QrCode,
@@ -40,7 +40,7 @@ export default function SolutionSection() {
             <SectionHeader
               eyebrow="The Solution"
               title="A Simpler Way To Support Every Patient"
-              subtitle="PracticeLingo is a multilingual communication platform designed specifically for healthcare environments — reducing pressure on practice staff while empowering patients."
+              subtitle="PracticeLingo is a multilingual communication platform designed specifically for healthcare environments, reducing pressure on practice staff while empowering patients."
             />
             <div className="mt-8 space-y-4">
               {capabilities.map(({ Icon, title, description }) => (
@@ -69,7 +69,7 @@ export default function SolutionSection() {
           <div className="flex-1 order-1 lg:order-2">
             <div className="relative">
               {/* Main image */}
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
+              <div className="relative rounded-3xl overflow-hidden w-full min-w-[270px] aspect-[4/3] shadow-xl">
                 <Image
                   src="/images/solution.jpeg"
                   alt="GP doctor consulting with patient using digital tools"
@@ -77,23 +77,6 @@ export default function SolutionSection() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#005EB8]/30 to-transparent" />
-              </div>
-
-              {/* Floating stat — top right */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-2xl px-5 py-4 shadow-xl border border-border animate-float">
-                <p className="text-3xl font-bold text-[#005EB8]">10+</p>
-                <p className="text-text-secondary text-xs mt-0.5">Languages</p>
-              </div>
-
-              {/* Floating stat — bottom left */}
-              <div
-                className="absolute -bottom-4 -left-4 bg-[#005EB8] rounded-2xl px-5 py-4 shadow-xl animate-float"
-                style={{ animationDelay: "1.5s" }}
-              >
-                <p className="text-3xl font-bold text-white">↓ 31%</p>
-                <p className="text-blue-200 text-xs mt-0.5">
-                  Reception queries
-                </p>
               </div>
             </div>
           </div>

@@ -1,82 +1,314 @@
-import { Calendar, ClipboardList, Pill, Smartphone, Megaphone, BookOpen } from "lucide-react";
+import {
+  Calendar,
+  ClipboardList,
+  Pill,
+  Smartphone,
+  Megaphone,
+  BookOpen,
+} from "lucide-react";
 
 type LangCode = "en" | "ar" | "hi" | "pt" | "zh" | "fr";
 
-const langConfig: Record<LangCode, {
-  greeting: string;
-  sub: string;
-  items: { num: number; label: string; sub: string; accent: string; bg: string }[];
-}> = {
+const langConfig: Record<
+  LangCode,
+  {
+    greeting: string;
+    sub: string;
+    items: {
+      num: number;
+      label: string;
+      sub: string;
+      accent: string;
+      bg: string;
+    }[];
+  }
+> = {
   en: {
     greeting: "What do you need today?",
     sub: "Tap an option to get started",
     items: [
-      { num: 1, label: "Register",          sub: "Register with Practice",    accent: "#005EB8", bg: "#EFF6FF" },
-      { num: 2, label: "Appointment",        sub: "Book an Appointment",       accent: "#007F3B", bg: "#F0FDF4" },
-      { num: 3, label: "Prescriptions",     sub: "Repeat Prescriptions",      accent: "#EA6C00", bg: "#FFF7ED" },
-      { num: 4, label: "NHS App",           sub: "NHS App Guide",             accent: "#1E3A5F", bg: "#EEF2FF" },
-      { num: 5, label: "Campaigns",         sub: "Health Campaigns",          accent: "#7C3AED", bg: "#F5F3FF" },
-      { num: 6, label: "Health Info",       sub: "Learn About Your Health",   accent: "#0B7A82", bg: "#F0FDFA" },
+      {
+        num: 1,
+        label: "Register",
+        sub: "Register with Practice",
+        accent: "#005EB8",
+        bg: "#EFF6FF",
+      },
+      {
+        num: 2,
+        label: "Appointment",
+        sub: "Book an Appointment",
+        accent: "#007F3B",
+        bg: "#F0FDF4",
+      },
+      {
+        num: 3,
+        label: "Prescriptions",
+        sub: "Repeat Prescriptions",
+        accent: "#EA6C00",
+        bg: "#FFF7ED",
+      },
+      {
+        num: 4,
+        label: "NHS App",
+        sub: "NHS App Guide",
+        accent: "#1E3A5F",
+        bg: "#EEF2FF",
+      },
+      {
+        num: 5,
+        label: "Campaigns",
+        sub: "Health Campaigns",
+        accent: "#7C3AED",
+        bg: "#F5F3FF",
+      },
+      {
+        num: 6,
+        label: "Health Info",
+        sub: "Learn About Your Health",
+        accent: "#0B7A82",
+        bg: "#F0FDFA",
+      },
     ],
   },
   ar: {
     greeting: "ماذا تحتاج اليوم؟",
     sub: "اضغط على خيار للبدء",
     items: [
-      { num: 1, label: "التسجيل",           sub: "Register",          accent: "#005EB8", bg: "#EFF6FF" },
-      { num: 2, label: "حجز موعد",          sub: "Appointment",       accent: "#007F3B", bg: "#F0FDF4" },
-      { num: 3, label: "وصفات طبية",        sub: "Prescriptions",     accent: "#EA6C00", bg: "#FFF7ED" },
-      { num: 4, label: "تطبيق NHS",         sub: "NHS App",           accent: "#1E3A5F", bg: "#EEF2FF" },
-      { num: 5, label: "حملات صحية",        sub: "Campaigns",         accent: "#7C3AED", bg: "#F5F3FF" },
-      { num: 6, label: "معلومات صحية",      sub: "Health Info",       accent: "#0B7A82", bg: "#F0FDFA" },
+      {
+        num: 1,
+        label: "التسجيل",
+        sub: "Register",
+        accent: "#005EB8",
+        bg: "#EFF6FF",
+      },
+      {
+        num: 2,
+        label: "حجز موعد",
+        sub: "Appointment",
+        accent: "#007F3B",
+        bg: "#F0FDF4",
+      },
+      {
+        num: 3,
+        label: "وصفات طبية",
+        sub: "Prescriptions",
+        accent: "#EA6C00",
+        bg: "#FFF7ED",
+      },
+      {
+        num: 4,
+        label: "تطبيق NHS",
+        sub: "NHS App",
+        accent: "#1E3A5F",
+        bg: "#EEF2FF",
+      },
+      {
+        num: 5,
+        label: "حملات صحية",
+        sub: "Campaigns",
+        accent: "#7C3AED",
+        bg: "#F5F3FF",
+      },
+      {
+        num: 6,
+        label: "معلومات صحية",
+        sub: "Health Info",
+        accent: "#0B7A82",
+        bg: "#F0FDFA",
+      },
     ],
   },
   hi: {
     greeting: "आज आपको क्या चाहिए?",
     sub: "शुरू करने के लिए टैप करें",
     items: [
-      { num: 1, label: "पंजीकरण",          sub: "Register",          accent: "#005EB8", bg: "#EFF6FF" },
-      { num: 2, label: "अपॉइंटमेंट",       sub: "Appointment",       accent: "#007F3B", bg: "#F0FDF4" },
-      { num: 3, label: "नुस्खे",           sub: "Prescriptions",     accent: "#EA6C00", bg: "#FFF7ED" },
-      { num: 4, label: "NHS ऐप",           sub: "NHS App",           accent: "#1E3A5F", bg: "#EEF2FF" },
-      { num: 5, label: "स्वास्थ्य अभियान", sub: "Campaigns",         accent: "#7C3AED", bg: "#F5F3FF" },
-      { num: 6, label: "स्वास्थ्य जानकारी",sub: "Health Info",       accent: "#0B7A82", bg: "#F0FDFA" },
+      {
+        num: 1,
+        label: "पंजीकरण",
+        sub: "Register",
+        accent: "#005EB8",
+        bg: "#EFF6FF",
+      },
+      {
+        num: 2,
+        label: "अपॉइंटमेंट",
+        sub: "Appointment",
+        accent: "#007F3B",
+        bg: "#F0FDF4",
+      },
+      {
+        num: 3,
+        label: "नुस्खे",
+        sub: "Prescriptions",
+        accent: "#EA6C00",
+        bg: "#FFF7ED",
+      },
+      {
+        num: 4,
+        label: "NHS ऐप",
+        sub: "NHS App",
+        accent: "#1E3A5F",
+        bg: "#EEF2FF",
+      },
+      {
+        num: 5,
+        label: "स्वास्थ्य अभियान",
+        sub: "Campaigns",
+        accent: "#7C3AED",
+        bg: "#F5F3FF",
+      },
+      {
+        num: 6,
+        label: "स्वास्थ्य जानकारी",
+        sub: "Health Info",
+        accent: "#0B7A82",
+        bg: "#F0FDFA",
+      },
     ],
   },
   pt: {
     greeting: "O que precisa hoje?",
     sub: "Toque numa opção para começar",
     items: [
-      { num: 1, label: "Registrar",         sub: "Register",          accent: "#005EB8", bg: "#EFF6FF" },
-      { num: 2, label: "Consulta",          sub: "Appointment",       accent: "#007F3B", bg: "#F0FDF4" },
-      { num: 3, label: "Receitas",          sub: "Prescriptions",     accent: "#EA6C00", bg: "#FFF7ED" },
-      { num: 4, label: "App NHS",           sub: "NHS App",           accent: "#1E3A5F", bg: "#EEF2FF" },
-      { num: 5, label: "Campanhas",         sub: "Campaigns",         accent: "#7C3AED", bg: "#F5F3FF" },
-      { num: 6, label: "Saúde",            sub: "Health Info",       accent: "#0B7A82", bg: "#F0FDFA" },
+      {
+        num: 1,
+        label: "Registrar",
+        sub: "Register",
+        accent: "#005EB8",
+        bg: "#EFF6FF",
+      },
+      {
+        num: 2,
+        label: "Consulta",
+        sub: "Appointment",
+        accent: "#007F3B",
+        bg: "#F0FDF4",
+      },
+      {
+        num: 3,
+        label: "Receitas",
+        sub: "Prescriptions",
+        accent: "#EA6C00",
+        bg: "#FFF7ED",
+      },
+      {
+        num: 4,
+        label: "App NHS",
+        sub: "NHS App",
+        accent: "#1E3A5F",
+        bg: "#EEF2FF",
+      },
+      {
+        num: 5,
+        label: "Campanhas",
+        sub: "Campaigns",
+        accent: "#7C3AED",
+        bg: "#F5F3FF",
+      },
+      {
+        num: 6,
+        label: "Saúde",
+        sub: "Health Info",
+        accent: "#0B7A82",
+        bg: "#F0FDFA",
+      },
     ],
   },
   zh: {
     greeting: "今天您需要什么？",
     sub: "点击选项开始",
     items: [
-      { num: 1, label: "注册",              sub: "Register",          accent: "#005EB8", bg: "#EFF6FF" },
-      { num: 2, label: "预约",              sub: "Appointment",       accent: "#007F3B", bg: "#F0FDF4" },
-      { num: 3, label: "处方",              sub: "Prescriptions",     accent: "#EA6C00", bg: "#FFF7ED" },
-      { num: 4, label: "NHS应用",          sub: "NHS App",           accent: "#1E3A5F", bg: "#EEF2FF" },
-      { num: 5, label: "健康活动",          sub: "Campaigns",         accent: "#7C3AED", bg: "#F5F3FF" },
-      { num: 6, label: "健康信息",          sub: "Health Info",       accent: "#0B7A82", bg: "#F0FDFA" },
+      {
+        num: 1,
+        label: "注册",
+        sub: "Register",
+        accent: "#005EB8",
+        bg: "#EFF6FF",
+      },
+      {
+        num: 2,
+        label: "预约",
+        sub: "Appointment",
+        accent: "#007F3B",
+        bg: "#F0FDF4",
+      },
+      {
+        num: 3,
+        label: "处方",
+        sub: "Prescriptions",
+        accent: "#EA6C00",
+        bg: "#FFF7ED",
+      },
+      {
+        num: 4,
+        label: "NHS应用",
+        sub: "NHS App",
+        accent: "#1E3A5F",
+        bg: "#EEF2FF",
+      },
+      {
+        num: 5,
+        label: "健康活动",
+        sub: "Campaigns",
+        accent: "#7C3AED",
+        bg: "#F5F3FF",
+      },
+      {
+        num: 6,
+        label: "健康信息",
+        sub: "Health Info",
+        accent: "#0B7A82",
+        bg: "#F0FDFA",
+      },
     ],
   },
   fr: {
     greeting: "De quoi avez-vous besoin ?",
     sub: "Appuyez pour commencer",
     items: [
-      { num: 1, label: "S'inscrire",        sub: "Register",          accent: "#005EB8", bg: "#EFF6FF" },
-      { num: 2, label: "Rendez-vous",       sub: "Appointment",       accent: "#007F3B", bg: "#F0FDF4" },
-      { num: 3, label: "Ordonnances",       sub: "Prescriptions",     accent: "#EA6C00", bg: "#FFF7ED" },
-      { num: 4, label: "App NHS",           sub: "NHS App",           accent: "#1E3A5F", bg: "#EEF2FF" },
-      { num: 5, label: "Campagnes",         sub: "Campaigns",         accent: "#7C3AED", bg: "#F5F3FF" },
-      { num: 6, label: "Santé",            sub: "Health Info",       accent: "#0B7A82", bg: "#F0FDFA" },
+      {
+        num: 1,
+        label: "S'inscrire",
+        sub: "Register",
+        accent: "#005EB8",
+        bg: "#EFF6FF",
+      },
+      {
+        num: 2,
+        label: "Rendez-vous",
+        sub: "Appointment",
+        accent: "#007F3B",
+        bg: "#F0FDF4",
+      },
+      {
+        num: 3,
+        label: "Ordonnances",
+        sub: "Prescriptions",
+        accent: "#EA6C00",
+        bg: "#FFF7ED",
+      },
+      {
+        num: 4,
+        label: "App NHS",
+        sub: "NHS App",
+        accent: "#1E3A5F",
+        bg: "#EEF2FF",
+      },
+      {
+        num: 5,
+        label: "Campagnes",
+        sub: "Campaigns",
+        accent: "#7C3AED",
+        bg: "#F5F3FF",
+      },
+      {
+        num: 6,
+        label: "Santé",
+        sub: "Health Info",
+        accent: "#0B7A82",
+        bg: "#F0FDFA",
+      },
     ],
   },
 };
@@ -91,7 +323,7 @@ type MobileMenuDemoProps = {
 };
 
 export default function MobileMenuDemo({
-  practiceName = "Earl's Court H&W",
+  practiceName = "Your GP Surgery",
   lang = "English",
   langFlag = "🇬🇧",
   langCode = "en",
@@ -107,8 +339,12 @@ export default function MobileMenuDemo({
             <span className="text-[#005EB8] text-xs font-bold">PL</span>
           </div>
           <div>
-            <p className="text-white font-semibold text-xs leading-tight">PracticeLingo</p>
-            <p className="text-blue-200 text-[10px] leading-tight">{practiceName}</p>
+            <p className="text-white font-semibold text-xs leading-tight">
+              PracticeLingo
+            </p>
+            <p className="text-blue-200 text-[10px] leading-tight">
+              {practiceName}
+            </p>
           </div>
         </div>
         <div className="flex items-center gap-1 bg-white/15 rounded-lg px-2 py-1">
@@ -144,8 +380,15 @@ export default function MobileMenuDemo({
                   <Icon className="w-4 h-4" style={{ color: accent }} />
                 </div>
               </div>
-              <p className="text-center text-[10px] font-bold leading-tight" style={{ color: accent }}>{label}</p>
-              <p className="text-center text-[9px] text-text-secondary mt-0.5">{sub}</p>
+              <p
+                className="text-center text-[10px] font-bold leading-tight"
+                style={{ color: accent }}
+              >
+                {label}
+              </p>
+              <p className="text-center text-[9px] text-text-secondary mt-0.5">
+                {sub}
+              </p>
             </div>
           );
         })}

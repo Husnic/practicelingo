@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import { OrganizationJsonLd, WebSiteJsonLd, ServiceJsonLd, FaqJsonLd } from "@/components/seo/JsonLd";
+import {
+  OrganizationJsonLd,
+  WebSiteJsonLd,
+  ServiceJsonLd,
+  FaqJsonLd,
+} from "@/components/seo/JsonLd";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -10,7 +15,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://practicelingo.co.uk";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://practicelingo.co.uk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -19,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | PracticeLingo",
   },
   description:
-    "PracticeLingo is a multilingual patient communication platform for UK GP surgeries and Primary Care Networks. Waiting room displays, QR mobile continuation, and audio guidance in 10+ languages.",
+    "PracticeLingo is a multilingual patient communication platform for UK GP surgeries and Primary Care Networks. Waiting room displays, QR mobile continuation, and audio guidance in 6 languages.",
   keywords: [
     "multilingual patient communication",
     "NHS GP surgery",
@@ -43,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "PracticeLingo",
     title: "PracticeLingo — Clear Care. Every Language.",
     description:
-      "Multilingual patient communication for UK GP surgeries. QR mobile continuation, audio translation, and waiting room displays in 10+ languages.",
+      "Multilingual patient communication for UK GP surgeries. QR mobile continuation, audio translation, and waiting room displays in 6 languages.",
     images: [
       {
         url: "/og-image.png",
@@ -57,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PracticeLingo — Clear Care. Every Language.",
     description:
-      "Multilingual patient communication for UK GP surgeries. QR mobile continuation in 10+ languages.",
+      "Multilingual patient communication for UK GP surgeries. QR mobile continuation in 6 languages.",
     images: ["/og-image.png"],
     creator: "@practicelingo",
   },

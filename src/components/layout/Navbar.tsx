@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/brand/Primary.png"
+            src="/brand/Variation.or.png"
             alt="PracticeLingo"
             width={160}
             height={40}

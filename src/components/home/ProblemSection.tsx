@@ -24,7 +24,7 @@ export default function ProblemSection() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Image — diverse patients in waiting room */}
           <div className="flex-1 relative animate-fade-in">
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0 shadow-xl">
+            <div className="relative rounded-3xl overflow-hidden w-full min-w-[270px] aspect-[4/5] max-w-sm mx-auto lg:mx-0 shadow-xl">
               <Image
                 src="/images/reception.jpeg"
                 alt="Diverse patients in a GP waiting room"
@@ -36,7 +36,7 @@ export default function ProblemSection() {
                 <p className="text-dark font-semibold text-sm mb-1">
                   Language barriers affect
                 </p>
-                <p className="text-3xl font-bold text-[#005EB8]">1 in 6</p>
+                <p className="text-3xl font-bold text-[#005EB8]">1 in 10</p>
                 <p className="text-text-secondary text-xs mt-1">
                   GP patients in diverse UK communities
                 </p>
@@ -52,7 +52,7 @@ export default function ProblemSection() {
             <SectionHeader
               eyebrow="The Challenge"
               title="Language Barriers Are Slowing Down Healthcare Access"
-              subtitle="Across the UK, many GP practices serve patients whose first language is not English — creating friction for patients and pressure for practice teams."
+              subtitle="Across the UK, many GP practices serve patients whose first language is not English, creating friction for patients and pressure for practice teams."
             />
 
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">

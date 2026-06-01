@@ -8,7 +8,7 @@ export function OrganizationJsonLd() {
     url: siteUrl,
     logo: `${siteUrl}/brand/Primary.png`,
     description:
-      "PracticeLingo is a multilingual patient communication platform for UK GP surgeries and Primary Care Networks, providing waiting room displays, QR mobile continuation, and audio guidance in 10+ languages.",
+      "PracticeLingo is a multilingual patient communication platform for UK GP surgeries and Primary Care Networks, providing waiting room displays, QR mobile continuation, and audio guidance in 6 languages.",
     slogan: "Clear Care. Every Language.",
     foundingLocation: {
       "@type": "Place",
@@ -31,11 +31,23 @@ export function OrganizationJsonLd() {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: "hello@practicelingo.co.uk",
-      availableLanguage: ["English", "Arabic", "Mandarin", "Portuguese", "Hindi", "French"],
+      availableLanguage: [
+        "English",
+        "Arabic",
+        "Mandarin",
+        "Portuguese",
+        "Hindi",
+        "French",
+      ],
     },
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
 }
 
 export function WebSiteJsonLd() {
@@ -44,15 +56,24 @@ export function WebSiteJsonLd() {
     "@type": "WebSite",
     url: siteUrl,
     name: "PracticeLingo",
-    description: "Multilingual patient communication platform for UK GP surgeries and PCNs.",
+    description:
+      "Multilingual patient communication platform for UK GP surgeries and PCNs.",
     potentialAction: {
       "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: `${siteUrl}/search?q={search_term_string}` },
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/search?q={search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
 }
 
 export function ServiceJsonLd() {
@@ -64,7 +85,7 @@ export function ServiceJsonLd() {
     operatingSystem: "Web",
     url: siteUrl,
     description:
-      "A multilingual patient communication platform for UK GP surgeries combining waiting room displays, QR mobile continuation, audio translation, and digital healthcare guidance in 10+ languages.",
+      "A multilingual patient communication platform for UK GP surgeries combining waiting room displays, QR mobile continuation, audio translation, and digital healthcare guidance in 6 languages.",
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
@@ -73,7 +94,7 @@ export function ServiceJsonLd() {
     featureList: [
       "Multilingual waiting room displays",
       "QR-powered mobile continuation",
-      "Audio translation in 10+ languages",
+      "Audio translation in 6 languages",
       "NHS App onboarding support",
       "Health campaign delivery",
       "Health A-Z education library",
@@ -82,12 +103,18 @@ export function ServiceJsonLd() {
     ],
     audience: {
       "@type": "Audience",
-      audienceType: "GP Practice, Primary Care Network, NHS Healthcare Provider",
+      audienceType:
+        "GP Practice, Primary Care Network, NHS Healthcare Provider",
       geographicArea: { "@type": "Country", name: "United Kingdom" },
     },
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
 }
 
 export function FaqJsonLd() {
@@ -100,7 +127,7 @@ export function FaqJsonLd() {
         name: "What is PracticeLingo?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "PracticeLingo is a multilingual patient communication platform designed for UK GP surgeries and Primary Care Networks. It provides waiting room displays that allow patients to select their preferred language, QR codes for mobile continuation, audio guidance, and digital healthcare information in 10+ languages.",
+          text: "PracticeLingo is a multilingual patient communication platform designed for UK GP surgeries and Primary Care Networks. It provides waiting room displays that allow patients to select their preferred language, QR codes for mobile continuation, audio guidance, and digital healthcare information in 6 languages.",
         },
       },
       {
@@ -154,10 +181,19 @@ export function FaqJsonLd() {
     ],
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
 }
 
-export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
+export function BreadcrumbJsonLd({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -169,5 +205,10 @@ export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string
     })),
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
 }

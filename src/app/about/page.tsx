@@ -17,25 +17,29 @@ const values = [
     Icon: Globe,
     bg: "bg-[#005EB8]",
     title: "Inclusion First",
-    description: "Every patient deserves to understand their care, regardless of their first language.",
+    description:
+      "Every patient deserves to understand their care, regardless of their first language.",
   },
   {
     Icon: Settings,
     bg: "bg-[#2EB6CC]",
     title: "Operationally Practical",
-    description: "Designed around real GP surgery workflows — simple to deploy, simple to use.",
+    description:
+      "Designed around real GP surgery workflows — simple to deploy, simple to use.",
   },
   {
     Icon: Building2,
     bg: "bg-[#007F3B]",
     title: "NHS Compatible",
-    description: "Built to complement NHS digital services and support health equity goals.",
+    description:
+      "Built to complement NHS digital services and support health equity goals.",
   },
   {
     Icon: Accessibility,
     bg: "bg-[#0B7A82]",
     title: "Accessible By Design",
-    description: "Large text, audio guidance, and touch-friendly interfaces for all patients.",
+    description:
+      "Large text, audio guidance, and touch-friendly interfaces for all patients.",
   },
 ];
 
@@ -64,13 +68,20 @@ export default function AboutPage() {
                 />
                 <div className="mt-6 space-y-4 text-text-secondary leading-relaxed">
                   <p>
-                    Modern healthcare systems depend heavily on communication. Yet millions of patients across the UK still struggle to understand healthcare information, navigate healthcare services, and engage with digital healthcare tools.
+                    Modern healthcare systems depend heavily on communication.
+                    Yet millions of patients across the UK still struggle to
+                    understand healthcare information, navigate healthcare
+                    services, and engage with digital healthcare tools.
                   </p>
                   <p>
-                    Many GP practices face increasing pressure supporting multilingual communities while managing heavy operational workloads.
+                    Many GP practices face increasing pressure supporting
+                    multilingual communities while managing heavy operational
+                    workloads.
                   </p>
                   <p>
-                    PracticeLingo was created to bridge this gap — using multilingual communication technology designed specifically for healthcare environments.
+                    PracticeLingo was created to bridge this gap — using
+                    multilingual communication technology designed specifically
+                    for healthcare environments.
                   </p>
                 </div>
                 <div className="mt-8">
@@ -93,19 +104,49 @@ export default function AboutPage() {
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { stat: "10+", label: "Languages supported", bg: "bg-[#005EB8]", light: true },
-                    { stat: "QR", label: "No app download needed", bg: "bg-[#E6F1FB]", light: false },
-                    { stat: "NHS", label: "Compatible workflows", bg: "bg-[#E6F1FB]", light: false },
-                    { stat: "0", label: "Reception dependency", bg: "bg-[#007F3B]", light: true },
+                    {
+                      stat: "6",
+                      label: "Languages supported",
+                      bg: "bg-[#005EB8]",
+                      light: true,
+                    },
+                    {
+                      stat: "QR",
+                      label: "No app download needed",
+                      bg: "bg-[#E6F1FB]",
+                      light: false,
+                    },
+                    {
+                      stat: "NHS",
+                      label: "Compatible workflows",
+                      bg: "bg-[#E6F1FB]",
+                      light: false,
+                    },
+                    {
+                      stat: "0",
+                      label: "Reception dependency",
+                      bg: "bg-[#007F3B]",
+                      light: true,
+                    },
                   ].map((item) => (
-                    <div key={item.label} className={`${item.bg} rounded-2xl p-5`}>
-                      <p className={`text-3xl font-bold mb-1 ${item.light ? "text-white" : "text-[#005EB8]"}`}>{item.stat}</p>
-                      <p className={`text-xs ${item.light ? "text-white/70" : "text-text-secondary"}`}>{item.label}</p>
+                    <div
+                      key={item.label}
+                      className={`${item.bg} rounded-2xl p-5`}
+                    >
+                      <p
+                        className={`text-3xl font-bold mb-1 ${item.light ? "text-white" : "text-[#005EB8]"}`}
+                      >
+                        {item.stat}
+                      </p>
+                      <p
+                        className={`text-xs ${item.light ? "text-white/70" : "text-text-secondary"}`}
+                      >
+                        {item.label}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -121,12 +162,19 @@ export default function AboutPage() {
             />
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {values.map(({ Icon, bg, title, description }) => (
-                <div key={title} className="bg-white rounded-3xl p-6 border border-border shadow-sm text-center">
-                  <div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                <div
+                  key={title}
+                  className="bg-white rounded-3xl p-6 border border-border shadow-sm text-center"
+                >
+                  <div
+                    className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+                  >
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-dark mb-2">{title}</h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed">
+                    {description}
+                  </p>
                 </div>
               ))}
             </div>
