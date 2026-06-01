@@ -1,0 +1,187 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient: dark navy → brand blue → teal -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#002060"/>
+      <stop offset="50%"  stop-color="#005EB8"/>
+      <stop offset="100%" stop-color="#0B7A82"/>
+    </linearGradient>
+
+    <!-- Subtle dot pattern -->
+    <pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#ffffff" opacity="0.07"/>
+    </pattern>
+
+    <!-- Glow behind headline -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#2EB6CC" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#005EB8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Pill background -->
+    <filter id="pillShadow" x="-5%" y="-20%" width="110%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- ── Background ── -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Soft glow blob behind headline -->
+  <ellipse cx="520" cy="320" rx="380" ry="220" fill="url(#glow)"/>
+
+  <!-- ── Top bar ── -->
+
+  <!-- PL rounded logo badge -->
+  <rect x="60" y="48" width="52" height="52" rx="14" fill="white" opacity="0.97"/>
+  <circle cx="86" cy="74" r="19" fill="#005EB8"/>
+  <text x="86" y="80"
+    text-anchor="middle"
+    fill="white"
+    font-size="13"
+    font-weight="900"
+    font-family="Arial, Helvetica, sans-serif"
+    letter-spacing="0.5">PL</text>
+
+  <!-- Brand name -->
+  <text x="128" y="71"
+    fill="white"
+    font-size="27"
+    font-weight="800"
+    font-family="Arial, Helvetica, sans-serif">PracticeLingo</text>
+
+  <!-- Tagline small -->
+  <text x="129" y="91"
+    fill="rgba(255,255,255,0.48)"
+    font-size="11"
+    font-weight="600"
+    letter-spacing="2.2"
+    font-family="Arial, Helvetica, sans-serif">CLEAR CARE. EVERY LANGUAGE.</text>
+
+  <!-- NHS compatible badge (top right) -->
+  <rect x="998" y="44" width="142" height="44" rx="11"
+    fill="rgba(255,255,255,0.12)"
+    stroke="rgba(255,255,255,0.22)"
+    stroke-width="1"/>
+  <!-- NHS blue block -->
+  <rect x="1010" y="53" width="40" height="26" rx="6" fill="#005EB8"/>
+  <text x="1030" y="71"
+    text-anchor="middle"
+    fill="white"
+    font-size="12"
+    font-weight="900"
+    letter-spacing="1"
+    font-family="Arial, Helvetica, sans-serif">NHS</text>
+  <!-- "Compatible" text -->
+  <text x="1060" y="70"
+    fill="rgba(255,255,255,0.85)"
+    font-size="13"
+    font-weight="600"
+    font-family="Arial, Helvetica, sans-serif">Compatible</text>
+
+  <!-- ── Main headline ── -->
+  <text
+    fill="white"
+    font-size="58"
+    font-weight="800"
+    font-family="Arial, Helvetica, sans-serif"
+    line-height="1.1">
+    <tspan x="60" y="240">Multilingual Patient</tspan>
+    <tspan x="60" dy="70">Communication for UK Healthcare</tspan>
+  </text>
+
+  <!-- ── Subheadline ── -->
+  <text
+    fill="rgba(255,255,255,0.70)"
+    font-size="22"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="400">
+    <tspan x="60" y="360">Waiting room displays · QR mobile continuation ·</tspan>
+    <tspan x="60" dy="32">10+ languages · Audio guidance · No app download</tspan>
+  </text>
+
+  <!-- ── Horizontal divider ── -->
+  <line x1="60" y1="430" x2="1140" y2="430" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- ── Bottom row: flags + pills ── -->
+
+  <!-- Flag emoji circles -->
+  <!-- English -->
+  <rect x="60" y="455" width="62" height="62" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="91" y="498" text-anchor="middle" font-size="30" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">🇬🇧</text>
+
+  <!-- Arabic -->
+  <rect x="134" y="455" width="62" height="62" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="165" y="498" text-anchor="middle" font-size="30" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">🇸🇦</text>
+
+  <!-- Mandarin -->
+  <rect x="208" y="455" width="62" height="62" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="239" y="498" text-anchor="middle" font-size="30" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">🇨🇳</text>
+
+  <!-- Portuguese -->
+  <rect x="282" y="455" width="62" height="62" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="313" y="498" text-anchor="middle" font-size="30" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">🇵🇹</text>
+
+  <!-- Hindi -->
+  <rect x="356" y="455" width="62" height="62" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="387" y="498" text-anchor="middle" font-size="30" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">🇮🇳</text>
+
+  <!-- French -->
+  <rect x="430" y="455" width="62" height="62" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="461" y="498" text-anchor="middle" font-size="30" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">🇫🇷</text>
+
+  <!-- "+4 more" pill -->
+  <rect x="504" y="468" width="78" height="36" rx="10" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="543" y="491"
+    text-anchor="middle"
+    fill="rgba(255,255,255,0.65)"
+    font-size="13"
+    font-weight="600"
+    font-family="Arial, Helvetica, sans-serif">+4 more</text>
+
+  <!-- ── Trust pills (right-aligned) ── -->
+
+  <!-- Pill 1: 10+ Languages -->
+  <rect x="734" y="460" width="140" height="36" rx="18"
+    fill="rgba(255,255,255,0.10)"
+    stroke="rgba(255,255,255,0.18)"
+    stroke-width="1"/>
+  <circle cx="754" cy="478" r="5" fill="#98D37F"/>
+  <text x="768" y="483"
+    fill="rgba(255,255,255,0.85)"
+    font-size="13"
+    font-weight="600"
+    font-family="Arial, Helvetica, sans-serif">10+ Languages</text>
+
+  <!-- Pill 2: GDPR Compliant -->
+  <rect x="886" y="460" width="142" height="36" rx="18"
+    fill="rgba(255,255,255,0.10)"
+    stroke="rgba(255,255,255,0.18)"
+    stroke-width="1"/>
+  <circle cx="906" cy="478" r="5" fill="#64D7FF"/>
+  <text x="920" y="483"
+    fill="rgba(255,255,255,0.85)"
+    font-size="13"
+    font-weight="600"
+    font-family="Arial, Helvetica, sans-serif">GDPR Compliant</text>
+
+  <!-- Pill 3: No App Needed -->
+  <rect x="1040" y="460" width="100" height="36" rx="18"
+    fill="rgba(255,255,255,0.10)"
+    stroke="rgba(255,255,255,0.18)"
+    stroke-width="1"/>
+  <circle cx="1057" cy="478" r="5" fill="#F59E0B"/>
+  <text x="1071" y="483"
+    fill="rgba(255,255,255,0.85)"
+    font-size="13"
+    font-weight="600"
+    font-family="Arial, Helvetica, sans-serif">No App</text>
+
+  <!-- ── URL watermark ── -->
+  <text x="60" y="610"
+    fill="rgba(255,255,255,0.30)"
+    font-size="13"
+    font-family="Arial, Helvetica, sans-serif">practicelingo.co.uk</text>
+
+</svg>
