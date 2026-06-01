@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+import { howItWorksMetadata } from "@/lib/page-metadata";
+
+export const metadata: Metadata = howItWorksMetadata;
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HowItWorksSection from "@/components/home/HowItWorksSection";

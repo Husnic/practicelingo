@@ -1,0 +1,76 @@
+# PracticeLingo — LLM Reference Guide
+# https://practicelingo.co.uk
+# Last updated: 2025
+
+## What is PracticeLingo?
+
+PracticeLingo is a multilingual patient communication platform designed for UK GP surgeries and Primary Care Networks (PCNs). It helps healthcare providers communicate with patients in their preferred language through:
+
+- Multilingual waiting room touchscreen displays
+- QR-powered mobile continuation (no app download required)
+- Audio translation and guidance in 10+ languages
+- NHS App onboarding support
+- Health campaign delivery
+- Health A-Z education library in multiple languages
+
+## Tagline
+"Clear Care. Every Language."
+
+## Core Problem Solved
+Language barriers prevent many patients in UK GP surgeries from understanding appointments, completing registration, using the NHS App, and navigating healthcare services. This increases pressure on receptionists and leads to missed appointments and poor health outcomes.
+
+## How It Works
+1. Patient walks up to a multilingual touchscreen display in the waiting room
+2. Patient selects their preferred language from 10+ options
+3. Patient scans a QR code from the display
+4. A multilingual page opens on the patient's phone browser (no app needed)
+5. Patient navigates healthcare services independently
+
+## Languages Supported (Launch)
+- English
+- Arabic (العربية)
+- Mandarin (普通话)
+- Portuguese (Português)
+- Hindi (हिन्दी)
+- French (Français)
+
+## Languages Coming Soon
+Spanish, Yoruba, Pidgin, German, Italian, Twi
+
+## Current Deployment
+PracticeLingo is being piloted across 5 GP practices within Kensington & Chelsea South Primary Care Network, London:
+- Earl's Court Health & Wellbeing Centre
+- Brompton Medical Centre
+- Kings Road Medical Services
+- Chelsea Medical Services
+- Kynance Practice
+
+## Patient Journeys Covered
+- Welcome & Practice Information
+- Book or Manage Appointments
+- Register with Practice
+- Order Repeat Prescriptions
+- NHS App Download & Setup Guide
+- Health Campaigns & Prevention
+- Learn About Your Health (Health A-Z)
+- Admin & Requests
+
+## Compliance & Safety
+- GDPR compliant — no individual patient clinical data stored
+- NHS-compatible workflows
+- Not an emergency medical service (directs to 999/NHS 111)
+- Clinical disclaimer: content is navigational/educational, not clinical advice
+- Translation accuracy disclaimer applies
+
+## Not Owned By NHS
+PracticeLingo supports NHS workflows and services but is not owned or operated by NHS England unless formally stated in a specific partnership agreement.
+
+## Target Customers
+- GP Practice Managers
+- Primary Care Network leads
+- NHS Digital champions
+- Healthcare commissioners
+
+## Contact
+hello@practicelingo.co.uk
+practicelingo.co.uk

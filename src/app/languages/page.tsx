@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+import { languagesMetadata } from "@/lib/page-metadata";
+
+export const metadata: Metadata = languagesMetadata;
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SectionHeader from "@/components/shared/SectionHeader";
