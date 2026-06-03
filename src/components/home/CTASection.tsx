@@ -32,11 +32,10 @@ export default function CTASection() {
               Get Started
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-              Bring Clearer Communication To Your Practice
+              Bring Clearer Communication To Your Organisation
             </h2>
             <p className="text-white/80 text-lg leading-relaxed">
-              Book a demo or get in touch to see how PracticeLingo transforms
-              multilingual patient communication across your practice.
+              Support patients. Reduce communication barriers. Improve access.
             </p>
           </div>
 
@@ -56,7 +55,7 @@ export default function CTASection() {
                   variant="white"
                   className="w-full justify-center"
                 >
-                  Book Demo
+                  Book a Demo
                 </Button>
                 <Button
                   href="/contact"
@@ -64,7 +63,7 @@ export default function CTASection() {
                   variant="white-outline"
                   className="w-full justify-center"
                 >
-                  Contact Team
+                  Contact Us
                 </Button>
               </div>
             </div>

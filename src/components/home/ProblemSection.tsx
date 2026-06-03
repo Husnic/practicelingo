@@ -2,11 +2,11 @@ import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const patientProblems = [
-  "Understand appointment systems",
-  "Complete registration forms",
-  "Use the NHS App",
-  "Follow healthcare instructions",
-  "Navigate healthcare services",
+  "booking appointments",
+  "using the NHS App",
+  "managing repeat prescriptions",
+  "accessing healthcare campaigns",
+  "understanding care pathways",
 ];
 
 const practiceProblems = [
@@ -38,7 +38,7 @@ export default function ProblemSection() {
                 </p>
                 <p className="text-3xl font-bold text-[#005EB8]">1 in 10</p>
                 <p className="text-text-secondary text-xs mt-1">
-                  GP patients in diverse UK communities
+                  GP patients in diverse communities
                 </p>
               </div>
             </div>
@@ -51,8 +51,8 @@ export default function ProblemSection() {
           <div className="flex-1">
             <SectionHeader
               eyebrow="The Challenge"
-              title="Language Barriers Are Slowing Down Healthcare Access"
-              subtitle="Across the UK, many GP practices serve patients whose first language is not English, creating friction for patients and pressure for practice teams."
+              title="Communication Barriers Continue To Impact Healthcare Access"
+              subtitle="Across England, communication barriers continue to affect patient understanding, healthcare access and service utilisation."
             />
 
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">

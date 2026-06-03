@@ -30,7 +30,7 @@ const steps = [
   },
   {
     number: "02",
-    title: "Select preferred language",
+    title: "Patient selects language",
     description:
       "Patient selects from 6 available languages with a single touch.",
     icon: (
@@ -51,7 +51,7 @@ const steps = [
   },
   {
     number: "03",
-    title: "Scan QR code",
+    title: "Patient scans QR code",
     description:
       "A QR code appears — patient scans it with their smartphone camera.",
     icon: (
@@ -72,7 +72,7 @@ const steps = [
   },
   {
     number: "04",
-    title: "Phone opens multilingual page",
+    title: "Phone opens multilingual guidance",
     description:
       "Translated healthcare guidance opens directly in their browser — no app download needed.",
     icon: (
@@ -120,7 +120,7 @@ export default function HowItWorksSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="How It Works"
-          title="Five Steps to Multilingual Care"
+          title="A Simple Five-Step Journey"
           subtitle="A simple, elegant workflow that requires no training for patients and minimal setup for practices."
           centered
         />

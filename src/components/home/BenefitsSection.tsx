@@ -3,12 +3,12 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import { Users, Lightbulb, Flag, Smartphone, Megaphone, Heart } from "lucide-react";
 
 const benefits = [
-  { Icon: Users, title: "Reduce Reception Pressure", description: "Fewer repeated explanations and routine admin conversations.", color: "text-white bg-[#005EB8]" },
-  { Icon: Lightbulb, title: "Improve Patient Understanding", description: "Help patients navigate healthcare more confidently.", color: "text-white bg-[#2EB6CC]" },
-  { Icon: Flag, title: "Improve Access", description: "Support inclusive communication across diverse multilingual communities.", color: "text-white bg-[#0B7A82]" },
-  { Icon: Smartphone, title: "Increase NHS App Adoption", description: "Help patients access NHS digital services more independently.", color: "text-white bg-[#007F3B]" },
-  { Icon: Megaphone, title: "Support Health Campaigns", description: "Deliver preventative messaging more effectively in multiple languages.", color: "text-white bg-[#F59E0B]" },
-  { Icon: Heart, title: "Improve Patient Experience", description: "Create a calmer and more inclusive waiting room environment.", color: "text-white bg-[#EC4899]" },
+  { Icon: Users, title: "Reduce Reception Workload", description: "Reduce repetitive questions and explanations.", color: "text-white bg-[#005EB8]" },
+  { Icon: Lightbulb, title: "Improve Patient Understanding", description: "Help patients access information confidently.", color: "text-white bg-[#2EB6CC]" },
+  { Icon: Flag, title: "Support Health Equity", description: "Improve accessibility across diverse communities.", color: "text-white bg-[#0B7A82]" },
+  { Icon: Smartphone, title: "Increase NHS App Adoption", description: "Support digital transformation goals.", color: "text-white bg-[#007F3B]" },
+  { Icon: Megaphone, title: "Strengthen Health Campaign Delivery", description: "Increase awareness and engagement.", color: "text-white bg-[#F59E0B]" },
+  { Icon: Heart, title: "Improve Patient Experience", description: "Create a more inclusive healthcare environment.", color: "text-white bg-[#EC4899]" },
 ];
 
 export default function BenefitsSection() {
@@ -34,7 +34,7 @@ export default function BenefitsSection() {
           <div className="flex-1">
             <SectionHeader
               eyebrow="Practice Benefits"
-              title="Built For Operational Efficiency"
+              title="Built For Modern Primary Care"
               subtitle="PracticeLingo reduces pressure on your team while improving outcomes for every patient — regardless of language."
               light
             />

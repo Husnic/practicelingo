@@ -27,7 +27,7 @@ export default function DataSecurityPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-dark mb-3">Reporting a Security Issue</h2>
-          <p>To report a security vulnerability or data breach concern: <strong>security@practicelingo.co.uk</strong></p>
+          <p>To report a security vulnerability or data breach concern: <strong>support@practicelingo.co.uk</strong></p>
         </section>
       </div>
     </LegalLayout>

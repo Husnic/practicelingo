@@ -10,22 +10,22 @@ export default function ComplaintsPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-dark mb-3">How to Raise a Concern</h2>
-          <p>To raise a complaint or concern, please contact us using the most relevant route below:</p>
+          <p>To raise a complaint or concern, please use the most relevant route below:</p>
           <div className="space-y-3 mt-4">
-            {[
-              { icon: "🌍", type: "Translation Concerns", email: "translations@practicelingo.co.uk" },
-              { icon: "♿", type: "Accessibility Concerns", email: "accessibility@practicelingo.co.uk" },
-              { icon: "🛡️", type: "Safeguarding Concerns", email: "safeguarding@practicelingo.co.uk" },
-              { icon: "📧", type: "General Complaints", email: "complaints@practicelingo.co.uk" },
-            ].map((item) => (
-              <div key={item.type} className="bg-surface rounded-2xl p-4 flex items-start gap-3">
-                <span className="text-2xl">{item.icon}</span>
-                <div>
-                  <p className="font-semibold text-dark text-sm">{item.type}</p>
-                  <a href={`mailto:${item.email}`} className="text-primary text-sm hover:underline">{item.email}</a>
-                </div>
+            <div className="bg-surface rounded-2xl p-4 flex items-start gap-3">
+              <span className="text-2xl">🌍</span>
+              <div>
+                <p className="font-semibold text-dark text-sm">Translation Concerns</p>
+                <a href="mailto:translations@practicelingo.co.uk" className="text-primary text-sm hover:underline">translations@practicelingo.co.uk</a>
               </div>
-            ))}
+            </div>
+            <div className="bg-surface rounded-2xl p-4 flex items-start gap-3">
+              <span className="text-2xl">📧</span>
+              <div>
+                <p className="font-semibold text-dark text-sm">All Other Concerns</p>
+                <a href="mailto:support@practicelingo.co.uk" className="text-primary text-sm hover:underline">support@practicelingo.co.uk</a>
+              </div>
+            </div>
           </div>
         </section>
         <section>

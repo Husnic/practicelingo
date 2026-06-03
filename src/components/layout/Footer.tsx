@@ -2,30 +2,60 @@ import Link from "next/link";
 import Image from "next/image";
 
 const productLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Solutions", href: "/solutions" },
   { label: "Languages", href: "/languages" },
   { label: "Pilot Programme", href: "/pilot-programme" },
-];
-
-const supportLinks = [
-  { label: "Accessibility Statement", href: "/legal/accessibility" },
   { label: "Contact", href: "/contact" },
-  { label: "Complaints Procedure", href: "/legal/complaints" },
 ];
 
-const legalLinks = [
+const patientLinks = [
+  { label: "Book Appointment", href: "/patient/book-appointment" },
+  { label: "Register With Practice", href: "/patient/register" },
+  { label: "Repeat Prescriptions", href: "/patient/repeat-prescriptions" },
+  { label: "NHS App Support", href: "/patient/nhs-app" },
+  { label: "Health Campaigns", href: "/patient/health-campaigns" },
+  { label: "Learn About Your Health", href: "/patient/learn-about-your-health" },
+];
+
+const accessibilityLinks = [
+  { label: "Accessibility Statement", href: "/legal/accessibility" },
+  { label: "Equality, Diversity & Inclusion", href: "/legal/edi" },
+  { label: "Complaints & Feedback", href: "/legal/complaints" },
+  { label: "Contact", href: "/contact" },
+];
+
+const governanceLegalLinks = [
   { label: "Privacy Policy", href: "/legal/privacy" },
   { label: "Terms of Use", href: "/legal/terms" },
   { label: "GDPR Statement", href: "/legal/gdpr" },
   { label: "Cookie Policy", href: "/legal/cookies" },
-  { label: "Clinical Disclaimer", href: "/legal/clinical-disclaimer" },
-  { label: "Translation Disclaimer", href: "/legal/translation-disclaimer" },
+  { label: "Data Security Statement", href: "/legal/data-security" },
 ];
 
-const safetyLinks = [
-  { label: "Safeguarding Statement", href: "/legal/safeguarding" },
+const clinicalSafetyLinks = [
+  { label: "Clinical Disclaimer", href: "/legal/clinical-disclaimer" },
   { label: "Emergency Disclaimer", href: "/legal/emergency" },
+  { label: "Safeguarding Statement", href: "/legal/safeguarding" },
+  { label: "Translation Disclaimer", href: "/legal/translation-disclaimer" },
+  { label: "AI Disclosure", href: "/legal/ai-disclosure" },
+];
+
+const transparencyLinks = [
+  { label: "NHS Affiliation Disclaimer", href: "/legal/nhs-affiliation" },
+  { label: "Governance Framework", href: "/legal/governance-framework" },
+  { label: "Information Governance", href: "/legal/information-governance" },
+];
+
+const columns = [
+  { heading: "Product", links: productLinks },
+  { heading: "Patient Access", links: patientLinks },
+  { heading: "Accessibility & Support", links: accessibilityLinks },
+  { heading: "Governance & Legal", links: governanceLegalLinks },
+  { heading: "Clinical & Safety", links: clinicalSafetyLinks },
+  { heading: "Transparency", links: transparencyLinks },
 ];
 
 export default function Footer() {
@@ -43,105 +73,63 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Brand col */}
-          <div className="lg:col-span-2">
+        {/* Brand row */}
+        <div className="mb-10 pb-8 border-b border-gray-800 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <Image
+            src="/brand/Primary-white.svg"
+            alt="PracticeLingo"
+            width={160}
+            height={40}
+            className="h-9 w-auto"
+          />
+          <p className="text-sm text-gray-400 leading-relaxed max-w-xl">
+            PracticeLingo helps patients understand and access healthcare
+            information in multiple languages. PracticeLingo is a communication
+            and patient engagement platform and does not provide medical
+            diagnosis, treatment, or emergency medical services.
+          </p>
+          <div className="shrink-0 flex items-center gap-3 bg-white/5 rounded-xl px-3 py-2.5 border border-white/10">
             <Image
-              src="/brand/Primary-white.svg"
-              alt="PracticeLingo"
-              width={160}
-              height={40}
-              className="h-9 w-auto mb-4"
+              src="/nhs.png"
+              alt="NHS"
+              width={36}
+              height={20}
+              className="h-5 w-auto opacity-80"
             />
-            <p className="text-sm text-gray-400 leading-relaxed max-w-xs mb-6">
-              Multilingual patient communication for GP surgeries and Primary
-              Care Networks across the UK.
+            <p className="text-xs text-gray-400 leading-relaxed">
+              Supports NHS workflows.
+              <br />
+              Not owned by NHS England.
             </p>
-            {/* NHS compatibility note */}
-            <div className="flex items-center gap-3 bg-white/5 rounded-xl px-3 py-2.5 border border-white/10 max-w-xs">
-              <Image src="/nhs.png" alt="NHS" width={36} height={20} className="h-5 w-auto opacity-80" />
-              <p className="text-xs text-gray-400 leading-relaxed">
-                Supports NHS workflows. Not owned by NHS England.
-              </p>
+          </div>
+        </div>
+
+        {/* Link columns */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+          {columns.map(({ heading, links }) => (
+            <div key={heading}>
+              <h3 className="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-4">
+                {heading}
+              </h3>
+              <ul className="space-y-2">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-xs text-gray-400 hover:text-white transition-colors leading-relaxed block"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-
-          {/* Product */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-              Product
-            </h3>
-            <ul className="space-y-2">
-              {productLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-              Support
-            </h3>
-            <ul className="space-y-2">
-              {supportLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4 mt-6">
-              Safety
-            </h3>
-            <ul className="space-y-2">
-              {safetyLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-              Legal
-            </h3>
-            <ul className="space-y-2">
-              {legalLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
 
         <div className="mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} PracticeLingo. All rights reserved.
+            © {new Date().getFullYear()} PracticeLingo. All Rights Reserved.
           </p>
           <p className="text-xs text-gray-500">Clear Care. Every Language.</p>
         </div>

@@ -28,7 +28,7 @@ export default function SafeguardingPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-dark mb-3">Contact</h2>
-          <p>To raise a safeguarding concern related to PracticeLingo: <strong>safeguarding@practicelingo.co.uk</strong></p>
+          <p>To raise a safeguarding concern related to PracticeLingo: <strong>support@practicelingo.co.uk</strong></p>
         </section>
       </div>
     </LegalLayout>

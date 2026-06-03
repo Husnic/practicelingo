@@ -19,7 +19,7 @@ export default function NhsAffiliationPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-dark mb-3">Queries</h2>
-          <p>For questions about our NHS relationships: <strong>partnerships@practicelingo.co.uk</strong></p>
+          <p>For questions about our NHS relationships: <strong>partnership@practicelingo.co.uk</strong></p>
         </section>
       </div>
     </LegalLayout>

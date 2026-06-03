@@ -48,8 +48,7 @@ export default function AccessibilityPage() {
           <h2 className="text-xl font-bold text-dark mb-3">Feedback</h2>
           <p>
             If you experience accessibility barriers, please contact us at{" "}
-            <strong>accessibility@practicelingo.co.uk</strong> so we can
-            improve.
+            <strong>support@practicelingo.co.uk</strong> so we can improve.
           </p>
         </section>
       </div>

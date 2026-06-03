@@ -1,33 +1,14 @@
 import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 import Button from "@/components/shared/Button";
-import { Globe, QrCode, Volume2, Navigation } from "lucide-react";
+import { Globe, QrCode, Volume2, Navigation, FileText } from "lucide-react";
 
 const capabilities = [
-  {
-    Icon: Globe,
-    title: "Select Preferred Language",
-    description:
-      "Patients choose from 6 supported languages on the waiting room display.",
-  },
-  {
-    Icon: QrCode,
-    title: "QR Mobile Continuation",
-    description:
-      "Scan a QR code — translated content opens directly on their phone.",
-  },
-  {
-    Icon: Volume2,
-    title: "Audio Guidance",
-    description:
-      "Listen to healthcare information read aloud in their language.",
-  },
-  {
-    Icon: Navigation,
-    title: "Independent Navigation",
-    description:
-      "Access appointments, prescriptions, NHS App help without staff dependency.",
-  },
+  { Icon: Globe, text: "choose their preferred language" },
+  { Icon: FileText, text: "access translated guidance" },
+  { Icon: QrCode, text: "scan QR codes to continue on their own device" },
+  { Icon: Volume2, text: "listen to audio guidance" },
+  { Icon: Navigation, text: "navigate healthcare services independently" },
 ];
 
 export default function SolutionSection() {
@@ -39,21 +20,19 @@ export default function SolutionSection() {
           <div className="flex-1 order-2 lg:order-1">
             <SectionHeader
               eyebrow="The Solution"
-              title="A Simpler Way To Support Every Patient"
-              subtitle="PracticeLingo is a multilingual communication platform designed specifically for healthcare environments, reducing pressure on practice staff while empowering patients."
+              title="Helping Patients Navigate Healthcare More Confidently"
+              subtitle="PracticeLingo transforms healthcare information into accessible multilingual experiences."
             />
-            <div className="mt-8 space-y-4">
-              {capabilities.map(({ Icon, title, description }) => (
-                <div key={title} className="flex items-start gap-4 group">
+            <p className="mt-6 text-text-secondary text-sm font-medium uppercase tracking-wide">
+              Patients can:
+            </p>
+            <div className="mt-3 space-y-3">
+              {capabilities.map(({ Icon, text }) => (
+                <div key={text} className="flex items-center gap-4 group">
                   <div className="w-11 h-11 rounded-2xl bg-[#E6F1FB] flex items-center justify-center shrink-0 group-hover:bg-[#005EB8] transition-colors duration-200">
                     <Icon className="w-5 h-5 text-[#005EB8] group-hover:text-white transition-colors duration-200" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-dark mb-1">{title}</h4>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      {description}
-                    </p>
-                  </div>
+                  <p className="text-dark font-medium">{text}</p>
                 </div>
               ))}
             </div>

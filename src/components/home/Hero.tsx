@@ -31,20 +31,24 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* ── Left: Text ── */}
           <div className="flex-1 text-center lg:text-left max-w-2xl">
-            <h1 className="animate-fade-in-up text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Clear Care.{" "}
-              <span className="text-light-blue">Every Language.</span>
+            <h1 className="animate-fade-in-up text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3">
+              Multilingual Patient Communication for Modern Healthcare
             </h1>
+            <p className="animate-fade-in-up text-base font-semibold text-[#64D7FF] mb-6">
+              Clear Care. Every Language.
+            </p>
             <p className="animate-fade-in-up delay-200 text-lg md:text-xl text-blue-100 leading-relaxed mb-8">
-              Helping patients understand, access, and navigate healthcare in
-              their preferred language while reducing pressure on GP practices.
+              PracticeLingo helps GP practices, Primary Care Networks and
+              healthcare organisations improve patient understanding, reduce
+              communication barriers, increase NHS App adoption, and support
+              health equity through multilingual patient communication.
             </p>
             <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button href="/contact" size="lg" variant="white">
                 Book a Demo
               </Button>
               <Button href="/how-it-works" size="lg" variant="white-outline">
-                How It Works
+                See How It Works
               </Button>
             </div>
 

@@ -58,7 +58,7 @@ export default function EdiPage() {
           <p>
             We are continuously expanding our language library and improving
             accessibility to better serve all communities. We welcome feedback
-            at <strong>inclusion@practicelingo.co.uk</strong>.
+            at <strong>support@practicelingo.co.uk</strong>.
           </p>
         </section>
       </div>
